@@ -1,1 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(26, 39, 66);
+}
+
+.clock {
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 39, 66);
+    font-family: 'Courier New', Courier, monospace;
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid rgb(0, 172, 195);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+/*for making the color appear whenever we put the 
+cursor on the clock*/
+
+.clock:hover {
+    background: rgb(0, 172, 195);
+    box-shadow: 0 0 30 rgb(0, 172, 195);
+}
+
+/*the date for the clock*/
+.date {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+}
+
+.date span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.date span:last-child {
+    background: #2E94E3;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
