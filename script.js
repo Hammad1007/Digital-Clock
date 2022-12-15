@@ -35,5 +35,3 @@ function initClock() {
     window.setInterval("updateClock()", 1);
 }
 
-// Main function to run the code
-initClock();
