@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <title>Digital Clock</title>
 </head>
-<body>
+<body onload="initClock()">
     <div class="clock">
         <div class="date">
-            <id class="hour">00</id>:
+            <id class="hour">01</id>:
             <id class="minute">00</id>:
             <id class="second">00</id>
-            <id class="period">AM</id>
+            <id class="period">PM</id>
         </div>
     </div>
-    <script src="script.js"></script>    
+    <script src="script.js">
+        // Main function to run the code in script.js
+        initClock();
+    </script>    
 </body>
 </html>
 
 <!--The code in script.js is basically the functions
 calling each other from one another to execute 
 the functionalities properly.-->
+
+
