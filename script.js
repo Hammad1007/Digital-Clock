@@ -1,37 +1,24 @@
-// updates the clock function
-function updateClock() {
-    var nd = new Date();     // choose the new date
-    var hr = nd.getHours();  // hour
-    var minu = nd.getMinutes();  // minutes
-    var seco = nd.getSeconds();  // seconds
-    var tp = "AM";   // PM or AM
-
-    // condition on hours, if they are 0 
-    if(hr == 0) {
-        hr = 12;
-    }
-    // conditions on hours if they are greater than 12
-    // then subtract them from 12
-    if(hr > 12) {
+// SetInterval function sets the time and then inputs it on the screen
+setInterval(()=> {
+    const time = document.querySelector("#time");
+    let date = new Date(); // new date object
+    let hr = date.getHours(); // get hours
+    let min = date.getMinutes(); // get minutes
+    let sec = date.getSeconds(); // get seconds
+    let pe = "AM"; // select day or night
+    if(hr > 12) { // considering day time
         hr = hr - 12;
-        tp = "PM"; // since after noon starts
+        pe = "PM";
     }
-    
-    Number.prototype.pad = function(digits) {
-        for(var n = this.toString(); n.length < digits; n = 0 + n) {
-            return n;
-        }
+    if(hr < 10) { // for making the digits equal
+        hr = "0" + hr;
     }
-    var ids = ["hour", "minute", "second", "period"];
-    var values = [hr.pad(2), minu.pad(2), seco.pad(2), tp];
-    for(var i = 0; i < ids.length; i++) {
-        document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    if(min < 10) {
+        min = "0" + min;
     }
-}
-
-// start clock function starts here
-function initClock() {
-    updateClock();
-    window.setInterval("updateClock()", 1);
-}
-
+    if(sec < 10) {
+        sec = "0" + sec;
+    }
+    // display the time on screen
+    time.textContent = hr + ":" + min + ":" + sec + pe;
+}) // end of the function setInterval
