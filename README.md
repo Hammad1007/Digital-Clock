@@ -1,6 +1,7 @@
 # Digital-Clock
 
-A digital time piece made using HTML, CSS and Javascript.
+A digital time piece made using concepts of HTML, CSS and Javascript.
 
 **Collaborators:** Hammad Rashid
+
 
