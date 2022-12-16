@@ -6,7 +6,10 @@ setInterval(()=> {
     let min = date.getMinutes(); // get minutes
     let sec = date.getSeconds(); // get seconds
     let pe = "AM"; // select day or night
-    if(hr > 12) { // considering day time
+    if(hr == 12) { // considering 12 at noon
+        pe = "PM";
+    }
+    if(hr >= 13) { // considering day time
         hr = hr - 12;
         pe = "PM";
     }
