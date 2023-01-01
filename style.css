@@ -6,7 +6,6 @@
 }
 
 /*for the whole body of the screen*/
-
 html, body {
     display: flex;
     height: 100%;
